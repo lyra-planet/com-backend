@@ -53,11 +53,11 @@
 
   const myAccountList = [
     {
-      label: 'NaiveUiAdmin@163.com',
+      label: 'QSzhiyun@163.com',
       value: 1,
     },
     {
-      label: 'NaiveUiAdmin@qq.com',
+      label: 'QSzhiyun@qq.com',
       value: 2,
     },
   ];

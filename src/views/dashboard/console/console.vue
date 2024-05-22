@@ -4,17 +4,17 @@
     <n-grid cols="1 s:2 m:3 l:4 xl:4 2xl:4" responsive="screen" :x-gap="12" :y-gap="8">
       <n-grid-item>
         <NCard
-          title="访问量"
+          title="设备数量"
           :segmented="{ content: true, footer: true }"
           size="small"
           :bordered="false"
         >
           <template #header-extra>
-            <n-tag type="success">日</n-tag>
+            <n-tag type="success">总</n-tag>
           </template>
           <div class="flex justify-between px-1 py-1">
             <n-skeleton v-if="loading" :width="100" size="medium" />
-            <CountTo v-else :startVal="1" :endVal="visits.dayVisits" class="text-3xl" />
+            <CountTo class="text-3xl" :startVal="1" :endVal="268" />
           </div>
           <div class="flex justify-between px-1 py-1">
             <div class="text-sn">
@@ -44,7 +44,7 @@
               <template v-else>
                 <div class="text-sn"> 总访问量： </div>
                 <div class="text-sn">
-                  <CountTo :startVal="1" :endVal="visits.amount" />
+                  <CountTo :startVal="1" :endVal="144" />
                 </div>
               </template>
             </div>
@@ -53,7 +53,7 @@
       </n-grid-item>
       <n-grid-item>
         <NCard
-          title="销售额"
+          title="在线数量"
           :segmented="{ content: true, footer: true }"
           size="small"
           :bordered="false"
@@ -65,9 +65,8 @@
             <n-skeleton v-if="loading" :width="100" size="medium" />
             <CountTo
               v-else
-              prefix="￥"
               :startVal="1"
-              :endVal="saleroom.weekSaleroom"
+              :endVal="241"
               class="text-3xl"
             />
           </div>
@@ -75,7 +74,7 @@
             <div class="flex-1 text-sn">
               <n-progress
                 type="line"
-                :percentage="saleroom.degree"
+                :percentage="241/268 * 100"
                 :indicator-placement="'inside'"
                 processing
               />
@@ -85,9 +84,9 @@
             <div class="flex justify-between">
               <n-skeleton v-if="loading" :width="100" size="medium" />
               <template v-else>
-                <div class="text-sn"> 总销售额： </div>
+                <div class="text-sn"> 总访问量： </div>
                 <div class="text-sn">
-                  <CountTo prefix="￥" :startVal="1" :endVal="saleroom.amount" />
+                  <CountTo :startVal="1" :endVal="144" />
                 </div>
               </template>
             </div>
@@ -96,7 +95,7 @@
       </n-grid-item>
       <n-grid-item>
         <NCard
-          title="订单量"
+          title="离线数量"
           :segmented="{ content: true, footer: true }"
           size="small"
           :bordered="false"
@@ -106,7 +105,7 @@
           </template>
           <div class="flex justify-between px-1 py-1">
             <n-skeleton v-if="loading" :width="100" size="medium" />
-            <CountTo v-else :startVal="1" :endVal="orderLarge.weekLarge" class="text-3xl" />
+            <CountTo v-else :startVal="1" :endVal="27" class="text-3xl" />
           </div>
           <div class="flex justify-between px-1 py-1">
             <div class="text-sn">
@@ -136,7 +135,7 @@
               <template v-else>
                 <div class="text-sn"> 转化率： </div>
                 <div class="text-sn">
-                  <CountTo :startVal="1" suffix="%" :endVal="orderLarge.amount" />
+                  <CountTo :startVal="1" suffix="%" :endVal="27/268 * 100" />
                 </div>
               </template>
             </div>
@@ -145,7 +144,7 @@
       </n-grid-item>
       <n-grid-item>
         <NCard
-          title="成交额"
+          title="报警次数"
           :segmented="{ content: true, footer: true }"
           size="small"
           :bordered="false"
@@ -155,7 +154,7 @@
           </template>
           <div class="flex justify-between px-1 py-1">
             <n-skeleton v-if="loading" :width="100" size="medium" />
-            <CountTo v-else prefix="￥" :startVal="1" :endVal="volume.weekLarge" class="text-3xl" />
+            <CountTo v-else  :startVal="1" :endVal="64" class="text-3xl" />
           </div>
           <div class="flex justify-between px-1 py-1">
             <div class="text-sn">
@@ -183,9 +182,9 @@
             <div class="flex justify-between">
               <n-skeleton v-if="loading" :width="100" size="medium" />
               <template v-else>
-                <div class="text-sn"> 总成交额： </div>
+                <div class="text-sn"> 总报警次数： </div>
                 <div class="text-sn">
-                  <CountTo prefix="￥" :startVal="1" :endVal="volume.amount" />
+                  <CountTo  :startVal="1" :endVal="196" />
                 </div>
               </template>
             </div>
@@ -297,26 +296,8 @@
     {
       icon: ShoppingCartOutlined,
       size: '32',
-      title: '商品',
+      title: '设别',
       color: '#ff9c6e',
-      eventObject: {
-        click: () => {},
-      },
-    },
-    {
-      icon: AccountBookOutlined,
-      size: '32',
-      title: '订单',
-      color: '#b37feb',
-      eventObject: {
-        click: () => {},
-      },
-    },
-    {
-      icon: CreditCardOutlined,
-      size: '32',
-      title: '票据',
-      color: '#ffd666',
       eventObject: {
         click: () => {},
       },
@@ -324,7 +305,7 @@
     {
       icon: MailOutlined,
       size: '32',
-      title: '消息',
+      title: '告警',
       color: '#5cdbd3',
       eventObject: {
         click: () => {},

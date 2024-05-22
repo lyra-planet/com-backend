@@ -1,9 +1,9 @@
-import logoImage from '@/assets/images/logo.png';
+import logoImage from '@/assets/images/logo.jpg';
 import loginImage from '@/assets/images/account-logo.png';
 
 export const websiteConfig = Object.freeze({
-  title: 'NaiveUiAdmin',
+  title: 'QSzhiyun',
   logo: logoImage,
   loginImage: loginImage,
-  loginDesc: 'Naive Ui Admin中后台前端/设计解决方案',
+  loginDesc: 'QSzhiyun后台解决方案',
 });

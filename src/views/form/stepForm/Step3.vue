@@ -5,7 +5,7 @@
         <div class="information">
           <n-grid cols="2 s:2 m:3 l:3 xl:3 2xl:3" responsive="screen" class="my-1">
             <n-gi>付款账户：</n-gi>
-            <n-gi>NaiveUiAdmin@163.com</n-gi>
+            <n-gi>QSzhiyun@163.com</n-gi>
           </n-grid>
           <n-grid cols="2 s:2 m:3 l:3 xl:3 2xl:3" responsive="screen" class="my-1">
             <n-gi>收款账户：</n-gi>

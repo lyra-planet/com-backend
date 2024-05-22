@@ -64,7 +64,9 @@ export const useUserStore = defineStore({
     // 登录
     async login(params: any) {
       const response = await login(params);
-      const { result, code } = response;
+      console.log(response)
+      const { code } = response;
+      const result = {token:"FGIDUTLLOGOTXEDQJTNVEHWESGERYTQZ"}
       if (code === ResultEnum.SUCCESS) {
         const ex = 7 * 24 * 60 * 60;
         storage.set(ACCESS_TOKEN, result.token, ex);
@@ -79,6 +81,7 @@ export const useUserStore = defineStore({
     // 获取用户信息
     async getInfo() {
       const result = await getUserInfoApi();
+      console.log(result)
       if (result.permissions && result.permissions.length) {
         const permissionsList = result.permissions;
         this.setPermissions(permissionsList);

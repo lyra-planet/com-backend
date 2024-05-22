@@ -17,9 +17,9 @@
           <template #label>收款人姓名</template>
           啊俊
         </n-descriptions-item>
-        <n-descriptions-item label="收款账户">NaiveUiAdmin@qq.com</n-descriptions-item>
+        <n-descriptions-item label="收款账户">QSzhiyun@qq.com</n-descriptions-item>
         <n-descriptions-item label="付款类型">支付宝</n-descriptions-item>
-        <n-descriptions-item label="付款账户">NaiveUiAdmin@163.com</n-descriptions-item>
+        <n-descriptions-item label="付款账户">QSzhiyun@163.com</n-descriptions-item>
         <n-descriptions-item label="转账金额">￥1980.00</n-descriptions-item>
         <n-descriptions-item label="状态">
           <n-tag type="success"> 已到账</n-tag>
@@ -39,7 +39,7 @@
           深圳
         </n-descriptions-item>
         <n-descriptions-item label="性别">男</n-descriptions-item>
-        <n-descriptions-item label="邮箱">NaiveUiAdmin@qq.com</n-descriptions-item>
+        <n-descriptions-item label="邮箱">QSzhiyun@qq.com</n-descriptions-item>
         <n-descriptions-item label="地址">广东省深圳市南山区</n-descriptions-item>
         <n-descriptions-item label="生日">1991-06-04</n-descriptions-item>
         <n-descriptions-item label="认证">

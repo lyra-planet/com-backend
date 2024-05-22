@@ -8,10 +8,10 @@
     style="max-width: 500px; margin: 40px auto 0 80px"
   >
     <n-form-item label="付款账户" path="myAccount">
-      <span>NaiveUiAdmin@163.com</span>
+      <span>QSzhiyun@163.com</span>
     </n-form-item>
     <n-form-item label="收款账户" path="account">
-      <span>NaiveUiAdmin@qq.com</span>
+      <span>QSzhiyun@qq.com</span>
     </n-form-item>
     <n-form-item label="收款人姓名" path="name">
       <span>Ah jung</span>

@@ -15,23 +15,55 @@ export interface BasicPageParams {
 /**
  * @description: 获取用户信息
  */
+
+const adminInfo = {
+  userId: '1',
+  username: 'lingmou',
+  realName: 'Lingmou',
+  avatar: "http://dummyimage.com/120x60",
+  desc: 'manager',
+  password: "NRDAKCANYFIXS",
+  token:"FGIDUTLLOGOTXEDQJTNVEHWESGERYTQZ",
+  permissions: [
+    {
+      label: '主控台',
+      value: 'dashboard_console',
+    },
+    {
+      label: '监控页',
+      value: 'dashboard_monitor',
+    },
+    {
+      label: '工作台',
+      value: 'dashboard_workplace',
+    },
+    {
+      label: '基础列表',
+      value: 'basic_list',
+    },
+    {
+      label: '基础列表删除',
+      value: 'basic_list_delete',
+    },
+  ],
+};
+
 export function getUserInfo() {
-  return http.request({
-    url: '/admin_info',
-    method: 'get',
-  });
+  return adminInfo
 }
 
 /**
  * @description: 用户登录
  */
 export function login(params) {
+  let postData: any = {
+    account: params.username,
+    password: params.password,
+  };
+  postData = postData;
+  console.log(postData);
   return http.request<BasicResponseModel>(
-    {
-      url: '/login',
-      method: 'POST',
-      params,
-    },
+    { url: 'http://118.25.85.189:8017/user/login', method: 'POST', data: postData },
     {
       isTransformResponse: false,
     }
